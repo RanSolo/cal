@@ -1,8 +1,13 @@
 require 'formatting'
 require 'test/unit'
 
-class FormattingTest < MiniTest::Unit::TestCase
+class FormattingTest <Test::Unit::TestCase
 
+  # def test_conditionals_m_O_year_ok
+  #   con = conditionals(0, 2012)
+  #    assert_equal con, "ArgumentError: that's not a month dummy"
+  # end
+  # 
   def test_month_arg_to_text
     m = month_arg_to_s(1)
     assert_equal "January", m
@@ -18,8 +23,8 @@ class FormattingTest < MiniTest::Unit::TestCase
   end
 
   def test_Saturday_l_day_to_s
-    day = individual_day_to_s(0)
-    assert_equal "Saturday", day
+    day = individual_day_to_s(01, 2012)
+    assert_equal "Sunday", day
   end
 
   def print_header
@@ -27,6 +32,10 @@ class FormattingTest < MiniTest::Unit::TestCase
     assert_equal "April 2014", header
   end
 
+  def test_individual_day_to_s
+      day = individual_day_to_s(4, 2012)
+      assert_equal "Sunday", day
+  end
 end
 # def test_find_weekday
 #   h = find_weekday(4, 2014)

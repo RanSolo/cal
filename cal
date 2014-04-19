@@ -1,2 +1,9 @@
-#!/usr/bin/env ruby
-puts "020202"
+# #!/usr/bin/env ruby
+#
+# $LOAD_PATH << "lib"
+# require 'zeller'
+# require 'formatting'
+#
+#
+# month =  ARGV[0]
+# year = ARGV[1]
