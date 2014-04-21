@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
-
-  
-
-  def find_weekday(m, y)
+def find_weekday(m, y)
     q = 1 #day of the week
     if m < 3 #if it is month 1 or 2 then do stuff below
        y = y - 1 #acounts for ZC's requirement that months 1,2 be counted in the previous year
