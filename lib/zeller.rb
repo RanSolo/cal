@@ -12,3 +12,6 @@ class Zeller
     h = (q + ((13*(m+1)/5)) + k + (k/4) + (j/4) + (5*j)) % 7
   end
 end
+#thinking about an if statement if h = 0 return 7, so that I can use a 
+#straight range for index_of_first_day in both Month and Year classes
+#instead of indexing from a manipulated array

@@ -23,6 +23,9 @@ class Year
         end
       end
     end
+    #thinking about an if statement in class zeller if h = 0 return 7, so that I can use a
+    #straight range for index_of_first_day in both Month and Year classes
+    #instead of indexing from a manipulated array like over in Month class
     def first_day_spaces
       month = 0
       first_day = Zeller.find_weekday(month, @y)
@@ -37,7 +40,7 @@ class Year
 
   def print_first_line
     m =( 0..11)
-  
+
     month_length = 21
     month = 0
 
