@@ -1,5 +1,6 @@
 
 class Year
+  attr_accessor :print_month
   attr_reader :y
   def initialize(y)
     @y = y.to_i
@@ -17,15 +18,50 @@ class Year
           print month_array[0].center(20) + "  " +month_array[1].center(20)+"  " +month_array[2].center(20)+ "\n" + "#{days}\n"
           month_array = month_array.drop(3)
           print_first_line
+          print "\n"
           i += 1
         end
       end
     end
+    def first_day_spaces
+      month = 0
+      first_day = Zeller.find_weekday(month, @y)
+      index_of_first_day = (0..63).to_a
+      i = first_day.to_i * 3
+      line_no = index_of_first_day[i]
+      line_no.times{print "_"}
+      month = line_no
+      print_month = (21-line_no)/3
+      @print_month = print_month
+    end
 
   def print_first_line
+    m =( 0..11)
+  
+    month_length = 21
+    month = 0
 
-    first_day = Zeller.find_weekday(1, @y)
-    print first_day
+    if month <= 12
+      first_day_spaces
+
+      for num in 1..print_month
+        print " ", num, " "
+        num +=  1
+        num_next = num
+        month += 1
+      num = 1
+      # first_day = Zeller.find_weekday(month+1, @y)
+    # elseif month 4%0
+      end
+      print "_"
+      first_day_spaces
+
+
+# month_array = month_array.drop(3)
+      # for num
+    end
+
+
   end
 
     # def print_first_line
