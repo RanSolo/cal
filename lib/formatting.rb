@@ -46,7 +46,7 @@ class   Month
 
   def calendar_body(num_next)
     counter = 0
-    num_months = self.ifleap
+    num_months = ifleap
     for num in num_next..num_months[@m - 1]
       if counter < 7
         if num < 10
@@ -70,7 +70,7 @@ class   Month
     end
   end
 
-   def self.ifleap
+   def ifleap
      if @y%4 == 0 && @y%100 == 0 && @y%400 == 0
        [31,29,31,30,31,30,31,31,30,31,30,31]
     else
